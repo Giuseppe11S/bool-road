@@ -1,11 +1,9 @@
+import CardPartecipanti from '../components/CardPartecipanti.jsx'
 
-
-import React from 'react'
 
 const SingoloViaggio = () => {
   return (
-    <>
-    </>
+    <CardPartecipanti/>
   )
 }
 

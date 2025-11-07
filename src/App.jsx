@@ -16,10 +16,8 @@ function App() {
      <BrowserRouter>
         <Routes>
               <Route element={<DefaultLayout/>}>
-                <Route path='/'
-                element={<HomePage/>}></Route>
-                <Route path='/:id' 
-                element={<SingoloViaggio/>}></Route>
+                <Route path='/' element={<HomePage/>}></Route>
+                <Route path='/:id' element={<SingoloViaggio/>}></Route>
               </Route>
         </Routes>
      </BrowserRouter>
