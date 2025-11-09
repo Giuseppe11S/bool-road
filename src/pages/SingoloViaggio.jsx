@@ -67,7 +67,7 @@ const SingoloViaggio = () => {
         </div>
       </div>
     </div>
-  )
+  ) 
 }
 
 export default SingoloViaggio

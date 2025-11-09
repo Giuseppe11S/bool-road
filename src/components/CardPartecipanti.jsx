@@ -11,8 +11,7 @@ const CardPartecipanti = ({ partecipante, isOpen, onToggle }) => {
 
                 {/* Header Accordion */}
                 <div className="partecipante-header" onClick={onToggle}>
-                    <h3> {partecipante.nome} {partecipante.cognome}</h3>
-                    <span>{isOpen ? '−' : '+'}</span>
+                    <h3> {partecipante.nome} {partecipante.cognome} <span>{isOpen ? '−' : '+'}</span> </h3>
                 </div>
 
                 {/* Dettagli partecipanti (visibili solo se la card è aperta) */}
