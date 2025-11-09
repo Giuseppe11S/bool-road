@@ -4,13 +4,13 @@ export default function Header() {
   // NAVBAR
   return (
     <>
-      <div>
+      <div className="container-header">
         <nav className="cnt-nav">
           <Link to="/">
-           Bool-Road
+            <h1>Bool-Road</h1>
           </Link>
         </nav>
       </div>
     </>
-    )
+  )
 }
