@@ -29,4 +29,4 @@ const SearchBar = ({ data }) => {
     );
 };
 
-export default SearchBar;
+export default SearchBar
