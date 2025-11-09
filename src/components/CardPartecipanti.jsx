@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 
 const CardPartecipanti = ({ partecipante, isOpen, onToggle }) => {
@@ -28,6 +27,4 @@ const CardPartecipanti = ({ partecipante, isOpen, onToggle }) => {
 }
 
 export default CardPartecipanti;
-=======
-// props per Singoli viaggi
->>>>>>> Giuseppe11s
+
