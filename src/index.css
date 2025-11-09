@@ -17,6 +17,7 @@ a {
 
 .cnt-nav {
   display: flex;
+<<<<<<< HEAD
   padding: 20px;
 
   background-color: #fb4a5b;
@@ -29,3 +30,8 @@ a {
   font-family: Arial, Helvetica, sans-serif;
   padding: 5px 37px;
 }
+=======
+}
+
+
+>>>>>>> Damiana

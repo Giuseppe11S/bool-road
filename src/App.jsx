@@ -8,21 +8,22 @@ import SingoloViaggio from './pages/SingoloViaggio'
 // Default Layout
 import DefaultLayout from './layouts/DefaultLayout'
 
+
 function App() {
 
   return (
 
     <>
-     <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-              <Route element={<DefaultLayout/>}>
-                <Route path='/'
-                element={<HomePage/>}></Route>
-                <Route path='/:id' 
-                element={<SingoloViaggio/>}></Route>
-              </Route>
+          <Route element={<DefaultLayout />}>
+            <Route path='/'
+              element={<HomePage />}></Route>
+            <Route path='/:id'
+              element={<SingoloViaggio />}></Route>
+          </Route>
         </Routes>
-     </BrowserRouter>
+      </BrowserRouter>
     </>
   )
 }
