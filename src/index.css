@@ -203,6 +203,12 @@ hr {
   }
 }
 
+.partecipante-card.active {
+  transform: scale(1.05);
+  transition: ease-in-out 0.2s;
+  background-color: #dcdcdc;
+}
+
 .partecipante-card:hover {
   transform: scale(1.05);
   transition: ease-in-out 0.2s;
