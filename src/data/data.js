@@ -2,8 +2,9 @@ export const viaggi = [
   {
     id: 1,
     destinazione: "Roma",
-    dataInizio: "2025-04-15",
-    dataFine: "2025-04-20",
+    dataInizio: "15/04/2025",
+    dataFine: "20/04/2025",
+    image: "/Roma.jpg",
     partecipanti: [
       {
         id: 1,
@@ -106,8 +107,9 @@ export const viaggi = [
   {
     id: 2,
     destinazione: "Parigi",
-    dataInizio: "2025-05-02",
-    dataFine: "2025-05-10",
+    dataInizio: "02/05/2025",
+    dataFine: "10/05/2025",
+    image: "/Parigi.jpg",
     partecipanti: [
       {
         id: 1,
@@ -210,8 +212,9 @@ export const viaggi = [
   {
     id: 3,
     destinazione: "Londra",
-    dataInizio: "2025-06-10",
-    dataFine: "2025-06-17",
+    dataInizio: "10/06/2025",
+    dataFine: "17/06/2025",
+    image: "/Londra.jpg",
     partecipanti: [
       {
         id: 1,
@@ -314,8 +317,9 @@ export const viaggi = [
   {
     id: 4,
     destinazione: "Barcellona",
-    dataInizio: "2025-07-01",
-    dataFine: "2025-07-08",
+    dataInizio: "01/07/2025",
+    dataFine: "08/07/2025",
+    image: "/Barcellona.jpg",
     partecipanti: [
       {
         id: 1,
@@ -418,8 +422,9 @@ export const viaggi = [
   {
     id: 5,
     destinazione: "Berlino",
-    dataInizio: "2025-07-20",
-    dataFine: "2025-07-27",
+    dataInizio: "20/07/2025",
+    dataFine: "27/07/2025",
+    image: "/Berlino.jpg",
     partecipanti: [
       {
         id: 1,
@@ -522,8 +527,9 @@ export const viaggi = [
   {
     id: 6,
     destinazione: "New York",
-    dataInizio: "2025-08-12",
-    dataFine: "2025-08-20",
+    dataInizio: "12/08/2025",
+    dataFine: "20/08/2025",
+    image: "/NewYork.jpg",
     partecipanti: [
       {
         id: 1,
@@ -626,8 +632,9 @@ export const viaggi = [
   {
     id: 7,
     destinazione: "Tokyo",
-    dataInizio: "2025-09-05",
-    dataFine: "2025-09-15",
+    dataInizio: "05/09/2025",
+    dataFine: "15/09/2025",
+    image: "/Tokyo.jpg",
     partecipanti: [
       {
         id: 1,
@@ -730,8 +737,9 @@ export const viaggi = [
   {
     id: 8,
     destinazione: "Sydney",
-    dataInizio: "2025-10-18",
-    dataFine: "2025-10-28",
+    dataInizio: "18/10/2025",
+    dataFine: "28/10/2025",
+    image: "/Sydney.jpg",
     partecipanti: [
       {
         id: 1,
