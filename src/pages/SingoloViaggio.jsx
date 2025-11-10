@@ -39,7 +39,7 @@ const SingoloViaggio = () => {
       <div className="singolo-viaggio-container">
         {/* --- HEADER VIAGGIO --- */}
         <div className="viaggio-header">
-          <h1>Destinazione: {viaggio.destinazione}</h1>
+          <h1>{viaggio.destinazione}</h1>
           <img
             src={viaggio.image}
             alt={viaggio.destinazione}
@@ -48,18 +48,18 @@ const SingoloViaggio = () => {
           <div className="viaggio-date">
             <p>
               <strong>Data Inizio:</strong>{" "}
-              {new Date(viaggio.dataInizio).toLocaleDateString("it-IT")}
+              {viaggio.dataInizio}
             </p>
             <p>
               <strong>Data Fine:</strong>{" "}
-              {new Date(viaggio.dataFine).toLocaleDateString("it-IT")}
+              {viaggio.dataFine}
             </p>
           </div>
         </div>
 
         {/* --- SEZIONE PARTECIPANTI --- */}
         <div className="partecipanti-section">
-          <h2>Partecipanti ({partecipantiFiltrati.length})</h2>
+          <h2>{partecipantiFiltrati.length} Partecipanti</h2>
 
           <div className="partecipanti-list">
             {partecipantiFiltrati.map((partecipante) => (
