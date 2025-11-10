@@ -6,15 +6,9 @@ import CardPartecipanti from "../components/CardPartecipanti";
 
 const SingoloViaggio = () => {
   const { id } = useParams();
+  const [openAccordion, setOpenAccordion] = useState(null);
+  const [search, setSearch] = useState("");
 
-  /***********
-      HOOK
-  ***********/
-  const [openAccordion, setOpenAccordion] = useState(null); // Variabile di stato che tiene traccia di quale partecipante ha aperto l'accordion
-
-  /*******************
-    RICERCA VIAGGIO
-  ********************/
   const viaggio = viaggi.find((viaggio) => viaggio.id === parseInt(id));
 
   if (!viaggio) {
@@ -25,67 +19,61 @@ const SingoloViaggio = () => {
     );
   }
 
-  /**************
-      FUNZIONE
-  ***************/
-  // Gestisce l’apertura e chiusura di una sola card alla volta
+  // 🔍 Filtra i partecipanti in base al termine cercato
+  const partecipantiFiltrati = viaggio.partecipanti.filter(
+    (p) =>
+      p.nome.toLowerCase().includes(search.toLowerCase()) ||
+      p.cognome.toLowerCase().includes(search.toLowerCase())
+  );
+
   const toggleAccordion = (partecipanteId) => {
     setOpenAccordion(openAccordion === partecipanteId ? null : partecipanteId);
   };
 
-  /****************
-      RENDERING
-  *****************/
   return (
-    <>
-      <div className="main-container-sv">
-        <div className="searchbar">
-          {/* La search bar */}
-          {/* <SearchBar data={viaggio.partecipanti} /> */}
+    <div className="main-container-sv">
+      <div className="searchbar">
+        <SearchBar search={search} setSearch={setSearch} />
+      </div>
+
+      <div className="singolo-viaggio-container">
+        {/* --- HEADER VIAGGIO --- */}
+        <div className="viaggio-header">
+          <h1>Destinazione: {viaggio.destinazione}</h1>
+          <img
+            src={viaggio.image}
+            alt={viaggio.destinazione}
+            className="viaggio-img"
+          />
+          <div className="viaggio-date">
+            <p>
+              <strong>Data Inizio:</strong>{" "}
+              {new Date(viaggio.dataInizio).toLocaleDateString("it-IT")}
+            </p>
+            <p>
+              <strong>Data Fine:</strong>{" "}
+              {new Date(viaggio.dataFine).toLocaleDateString("it-IT")}
+            </p>
+          </div>
         </div>
 
-        <div>{/* card partecipanti */}</div>
+        {/* --- SEZIONE PARTECIPANTI --- */}
+        <div className="partecipanti-section">
+          <h2>Partecipanti ({partecipantiFiltrati.length})</h2>
 
-        <div className="singolo-viaggio-container">
-          {/* --- HEADER VIAGGIO --- */}
-          <div className="viaggio-header">
-            <h1>Destinazione: {viaggio.destinazione}</h1>
-            <img
-              src={viaggio.image}
-              alt={viaggio.destinazione}
-              className="viaggio-img"
-            />
-            <div className="viaggio-date">
-              <p>
-                <strong>Data Inizio:</strong>{" "}
-                {new Date(viaggio.dataInizio).toLocaleDateString("it-IT")}
-              </p>
-              <p>
-                <strong>Data Fine:</strong>{" "}
-                {new Date(viaggio.dataFine).toLocaleDateString("it-IT")}
-              </p>
-            </div>
-          </div>
-
-          {/* --- SEZIONE PARTECIPANTI --- */}
-          <div className="partecipanti-section">
-            <h2>Partecipanti ({viaggio.partecipanti.length})</h2>
-
-            <div className="partecipanti-list">
-              {/* Ciclo che genera una card per ogni partecipante */}
-              {viaggio.partecipanti.map((partecipante) => (
-                <CardPartecipanti
-                  key={partecipante.id}
-                  partecipante={partecipante} // Passaggio dell'intero oggetto come props
-                  isOpen={openAccordion === partecipante.id}
-                  onToggle={() => toggleAccordion(partecipante.id)}
-                />
-              ))}
-            </div>
+          <div className="partecipanti-list">
+            {partecipantiFiltrati.map((partecipante) => (
+              <CardPartecipanti
+                key={partecipante.id}
+                partecipante={partecipante}
+                isOpen={openAccordion === partecipante.id}
+                onToggle={() => toggleAccordion(partecipante.id)}
+              />
+            ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
