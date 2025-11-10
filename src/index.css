@@ -65,6 +65,7 @@ a {
   height: 150px;
   object-fit: cover;
   border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .data-viaggio {
@@ -73,26 +74,124 @@ a {
 h2 {
   margin: 4px 0;
 }
+/*************************************************
+   SEARCHBAR 
+ *************************************************/
+.searchbar {
+  margin: 10px;
+  align-self: center;
+}
+
+input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+  border-color: #fb4a5b;
+  outline: none;
+}
 
 /*************************************************
    SINGOLO VIAGGIO 
  *************************************************/
 
 .main-container-sv {
-  background-color: beige;
   margin: 0 auto;
   width: 80%;
+  display: flex;
+  flex-direction: column;
 }
 
-.searchbar {
-  background-color: blueviolet;
+h1 {
+  text-align: center;
 }
 
 .viaggio-img {
   width: 100%;
-  max-width: 400px;
   height: 300px;
   object-fit: cover;
   border-radius: 16px;
   margin-top: 10px;
+}
+
+.viaggio-date {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  border-bottom: 1px solid #c8caca;
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+
+/*************************************************
+   CARD PARTECIPANTI 
+ *************************************************/
+.partecipanti-section {
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 30px;
+  border: 1px solid #c8caca;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  width: 60%;
+  margin: 30px auto;
+  h2 {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+.partecipanti-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.partecipante-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin-bottom: 8px;
+  }
+}
+
+.partecipante-card {
+  border: 1px solid #c8caca;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  width: 280px;
+  border-radius: 20px;
+  padding: 10px 0;
+}
+
+.img-partecipante {
+  width: 60px;
+  background-color: gainsboro;
+  border-radius: 50px;
+  margin-bottom: 4px;
+}
+
+hr {
+  color: #c8caca;
+}
+
+.open-closed {
+  color: #fb4a5b;
+}
+
+.partecipante-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  p {
+    padding: 0 10px;
+  }
 }
